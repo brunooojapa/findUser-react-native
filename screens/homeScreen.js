@@ -41,10 +41,7 @@ export default class homeScreen extends Component {
 			this.setState({
 				loading: false
 			});
-			Alert.alert(
-				'Algo está errado',
-				'Preencha os capos para efetuar uma busca.'
-			);
+			Alert.alert('Something is wrong', 'Fill in the fields to search.');
 		} else {
 			Axios({
 				cache: 'no-cache',
@@ -65,8 +62,8 @@ export default class homeScreen extends Component {
 					} else {
 						console.log('========== response erro =============');
 						Alert.alert(
-							'Algo está errado',
-							'Verificar sua conecxão'
+							'Something is wrong',
+							'Verify your connection'
 						);
 						this.setState({ loading: false });
 						console.log(response.data);
@@ -75,7 +72,7 @@ export default class homeScreen extends Component {
 				.catch(error => {
 					this.setState({ loading: false });
 					console.log('Ops');
-					Alert.alert('Algo está errado', 'Nome do Usuario invalido');
+					Alert.alert('Something is wrong', 'Invalid username');
 				});
 		}
 	};
