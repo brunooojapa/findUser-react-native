@@ -13,6 +13,9 @@
       "image": "./assets/images/gitgit.png",
       "resizeMode": "contain",
       "backgroundColor": "#000"
+    },
+    "android": {
+      "package": "com.brunooojapa.finduser"
     }
   }
 }
