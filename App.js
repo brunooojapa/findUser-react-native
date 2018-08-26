@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import RootNavigation from './navigation/RootNavigator';
-import { AppLoading, Asset, Font } from 'expo';
+import { AppLoading, Font } from 'expo';
 
 export default class App extends React.Component {
 	state = {
@@ -11,10 +11,6 @@ export default class App extends React.Component {
 		await Font.loadAsync({
 			'Lato-Regular': require('./assets/fonts/Lato-Regular.ttf')
 		});
-		// await Asset.loadAsync([
-		// 	require('./assets/images/background_login.png'),
-		// 	require('./assets/images/logo_drawer.png')
-		// ]);
 	}
 	render() {
 		if (!this.state.assestsLoad) {
